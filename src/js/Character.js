@@ -9,11 +9,11 @@ class Character {
   }
 
   get name() {
-    return this.name;
+    return this.Name;
   }
 
   get type() {
-    return this.type;
+    return this.Type;
   }
 
   set name(value) {
@@ -21,11 +21,11 @@ class Character {
       throw new Error('Имя должно быть не менее 2 и не более 10 символов');
     }
 
-    this.name = value;
+    this.Name = value;
   }
 
   set type(value) {
-    this.type = value;
+    this.Type = value;
   }
 
   levelUp() {
