@@ -50,7 +50,7 @@ test('error if health = 0', () => {
   }).toThrowError('hero dead');
 });
 
-test('shoud health of hero change down to 70 when called damage with 40 points', () => {
+test('change health after damage', () => {
   const test = new Character('qwerty', 'Zombie');
   test.defence = 10;
   test.damage(50);
