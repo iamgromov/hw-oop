@@ -1,19 +1,24 @@
+const typesList = [
+  'Bowman',
+  'Daemon',
+  'Magician',
+  'Swordsman',
+  'Undead',
+  'Zombie',
+];
+
 class Character {
   constructor(name, type) {
     this.name = name;
     this.type = type;
     this.health = 100;
     this.level = 1;
-    this.attack = 0;
-    this.defence = 0;
+    this.attack = undefined;
+    this.defence = undefined;
   }
 
   get name() {
     return this.Name;
-  }
-
-  get type() {
-    return this.Type;
   }
 
   set name(value) {
@@ -24,7 +29,15 @@ class Character {
     this.Name = value;
   }
 
+  get type() {
+    return this.Type;
+  }
+
   set type(value) {
+    if (!typesList.includes(value)) {
+      throw new Error('Тип героя не существует');
+    }
+
     this.Type = value;
   }
 

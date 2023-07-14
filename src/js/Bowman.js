@@ -1,11 +1,11 @@
 import Character from './Character';
 
-class Bowerman extends Character {
+class Bowman extends Character {
   constructor(name) {
-    super(name, 'Bowerman');
+    super(name, 'Bowman');
     this.attack = 25;
     this.defence = 25;
   }
 }
 
-export default Bowerman;
+export default Bowman;
